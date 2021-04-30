@@ -1,20 +1,20 @@
 class Todo {
 	constructor(id, text, status=false) {
-		this.id = id;
-		this.text = text;
-		this.status = status;
+		this._id = id;
+		this._text = text;
+		this._status = status;
 	}
 
 	get id() {
-		return this.id;
+		return this._id;
 	}
 
 	get text() {
-		return this.text;
+		return this._text;
 	}
 
 	get status() {
-		return this.status;
+		return this._status;
 	}
 }
 

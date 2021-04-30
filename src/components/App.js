@@ -1,23 +1,27 @@
 import React, { useEffect } from 'react';
+import Todos from './Todos';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { initTodos } from './core/infrastructure/actions.js';
+import { initTodos } from '../core/infrastructure/actions.js';
 
 
 const App = (props) => {
 
 	const todos = useSelector( store => store.todos );
+	const isLoading = useSelector( store => store.loading );
+
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(initTodos());
 	}, [])
 
-	console.log(todos);
-
 	return (
 		<div className='App'>
-			<h1>Hello, World!</h1>
+			{ isLoading 
+				? <p> loading... </p>
+				: <Todos todos={todos} />
+			}
 		</div>
 	);
 }

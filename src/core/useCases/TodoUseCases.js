@@ -23,6 +23,16 @@ class TodoUseCases extends TodoUseCasesI {
 		const todos = this.todoServices.getTodos();
 		return todos;
 	}
+
+	createTodo(todo) {
+		const createdTodo = this.todoServices.createTodo(todo);
+		return createdTodo;
+	}
+
+	updateTodo(todo) {
+		const updatedTodo = this.todoServices.updateTodo(todo);
+		return updatedTodo;
+	}
 }
 
 export default TodoUseCases;
