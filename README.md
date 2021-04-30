@@ -1,4 +1,4 @@
-# This is test application to practice implmenting clean architecture with react.
+# This is a test application to practice implmenting clean architecture with react.
 
 ## `npm run build`
 build the project
